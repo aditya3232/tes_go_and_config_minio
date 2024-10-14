@@ -5,8 +5,8 @@ x-minio-common: &minio-common
   image: quay.io/minio/minio:latest
   command: server --console-address ":9090" /mnt/data
   ports:
-    - "8500:8500"
-    - "9090:9090"
+    - "9000:9000"
+    - "9001:9001"
   healthcheck:
     test: ["CMD", "curl", "-f", "http://localhost:8500/minio/health/live"]
     interval: 30s
